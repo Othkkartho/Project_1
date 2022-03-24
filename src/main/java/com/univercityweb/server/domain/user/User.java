@@ -24,10 +24,6 @@ import java.util.stream.Collectors;
 @Table(name = "users")
 public class User implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long dbId;
-
-    @Column(length = 100, nullable = false)
     private String user;
 
     @Column(length = 100, nullable = false)
