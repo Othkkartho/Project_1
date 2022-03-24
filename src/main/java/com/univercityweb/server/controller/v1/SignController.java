@@ -41,4 +41,12 @@ public class SignController {
         String signupId = signService.signup(userSignupRequestDto);
         return responseService.getSingleResult(signupId);
     }
+
+//    @ApiOperation(value = "", notes = "")
+//    @PostMapping("/signup_detail")
+//    public SingleResult<String> signup_detail(
+//            @ApiParam(value = ""m required = true)
+//            @RequestBody U) {
+//
+//    }
 }

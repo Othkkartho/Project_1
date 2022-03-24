@@ -17,10 +17,11 @@ import java.util.Collection;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users_details")
+@Table(name = "users_detail")
 public class UserDetail {
     @Id
-    private String user;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long dbId;
 
     @Column(length = 100)
     private String department;
@@ -39,4 +40,6 @@ public class UserDetail {
 
     @Column
     private LocalDateTime gradDate;
+
+    private String user;
 }

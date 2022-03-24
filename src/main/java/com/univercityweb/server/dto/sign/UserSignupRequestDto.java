@@ -1,6 +1,7 @@
 package com.univercityweb.server.dto.sign;
 
 import com.univercityweb.server.domain.user.User;
+import com.univercityweb.server.domain.user.UserDetail;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class UserSignupRequestDto {
                 .name(name)
                 .password(passwordEncoder.encode(password))
                 .roles("ROLE_USER")
+                .userDetails(Collections.singletonList(UserDetail.builder().user(user).build()))
                 .build();
     }
 }
