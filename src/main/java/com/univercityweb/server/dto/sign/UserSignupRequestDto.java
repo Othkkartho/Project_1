@@ -26,7 +26,7 @@ public class UserSignupRequestDto {
                 .name(name)
                 .password(passwordEncoder.encode(password))
                 .roles("ROLE_USER")
-                .userDetails(Collections.singletonList(UserDetail.builder().user(user).build()))
+                .userDetails(Collections.singletonList(UserDetail.builder().userId(user).build()))
                 .build();
     }
 }

@@ -41,5 +41,5 @@ public class UserDetail {
     @Column
     private LocalDateTime gradDate;
 
-    private String user;
+    private String userId;
 }

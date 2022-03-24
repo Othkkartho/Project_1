@@ -20,7 +20,7 @@ import java.util.Collection;
 @Table(name = "users")
 public class User implements UserDetails {
     @Id
-    @Column(length = 50)
+    @Column(length = 50, name = "userId")
     private String user;
 
     @Column(length = 100, nullable = false)
@@ -33,7 +33,7 @@ public class User implements UserDetails {
     private String roles;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user")
+    @JoinColumn(name = "userId")
     private Collection<UserDetail> userDetails = new ArrayList<>();
 
     @Override
