@@ -32,7 +32,7 @@ public class UserDetail {
     @Column(length = 100)
     private String phoneNum;
 
-    @Column(length = 100)
+    @Column(length = 100, unique = true)
     private String email;
 
     @Column
